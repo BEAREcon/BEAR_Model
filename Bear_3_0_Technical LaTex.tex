@@ -1212,16 +1212,16 @@ Figure 1:\textbf{ Production Nesting}
 \begin{tikzpicture}
 
 \tikzset{
-    level 1/.style={sibling distance=5.5cm},
+    level 1/.style={sibling distance=5.55cm},
     level 2/.style={sibling distance=1cm}
 }
-\node {\normalsize Output (XP)}
-    child {node {\scriptsize Non-Energy Intermediate Demand Bundle (ND)}
+\node[draw, fill=cyan!40, rounded corners] {\normalsize Output (XP)}
+    child {node[draw, fill=cyan!20, rounded corners] {\scriptsize Non-Energy Intermediate Demand Bundle (ND)}
         child{node { }
             child{node { }}
             child{node { }}
         }
-        child{node {$(XAp_{nf})$}
+        child{node[draw, fill=cyan!20, rounded corners] {$(XAp_{nf})$}
             child{node { }}
             child{node { }}
         }
@@ -1231,19 +1231,19 @@ Figure 1:\textbf{ Production Nesting}
             edge from parent node[right] {$CES(0, 0)$}
         }
     } 
-    child {node {\scriptsize Capital-Energy-Labour Bundle (KEL)}
-        child{node [shift={(-1.8cm, 0)}]{Labour Demand Bundle (AL)}
+    child {node[draw, fill=cyan!20, rounded corners] {\scriptsize Capital-Energy-Labour Bundle (KEL)}
+        child{node[draw, fill=cyan!20, rounded corners] [shift={(-1.85cm, -0.2cm)}]{Labour Demand Bundle (AL)}
             child{node [shift={(0, -0.5cm)}] { }}
-            child{node [shift={(0, -0.5cm)}] {Labour Demand by Skill Type}}
+            child{node[draw, fill=cyan!20, rounded corners] [shift={(0, -0.5cm)}] {Labour Demand by Skill Type}}
             child{node [shift={(0, -0.5cm)}] { } edge from parent node[right] {$CES(\sigma^t, \lambda_l)$}}     
         }
-        child{node [shift={(1cm, 0)}] {Capital-Energy Bundle (KE)} 
-            child{node [shift={(-0.5cm, -0.2cm)}] {Energy Bundle (Ev)}
+        child{node[draw, fill=cyan!20, rounded corners] [shift={(1cm, 0)}] {Capital-Energy Bundle (KE)} 
+            child{node[draw, fill=cyan!20, rounded corners] [shift={(-0.5cm, -0.2cm)}] {Energy Bundle (Ev)}
                 child{node { }
                     child{node { }}
                     child{node { }}
                 }
-                child{node {Energy Demand by Fuel Type ($XAp_e$)}
+                child{node[draw, fill=cyan!20, rounded corners] {Energy Demand by Fuel Type ($X\!Ap_e$)}
                     child{node { }}
                     child{node { }}
                 }
@@ -1253,13 +1253,13 @@ Figure 1:\textbf{ Production Nesting}
                     edge from parent node[right] {$CES(\sigma^f, \lambda_c)$}
                 }
             }
-            child{node [shift={(-0.1cm, 0.35cm)}] {Capital Demand} edge from parent node[right] {$CES(\sigma^k, \lambda_\kappa)$}}
+            child{node[draw, fill=cyan!20, rounded corners] [shift={(-0.1cm, 0.35cm)}] {Capital Demand} edge from parent node[right] {$CES(\sigma^k, \lambda_\kappa)$}}
             edge from parent node[right] {$CES(\sigma^v, 0)$}
         }
         edge from parent node[right] {\small$CES(\sigma^\rho, 0)$}
     };
-    \path (-2.65,-4.4) node[below] {Demand by Region of Origin};
-    \path (3.35,-7.6) node[below] {Demand by Region of Origin};
+    \path (-2.65,-4.4) node[below][draw, fill=cyan!20, rounded corners] {Demand by Region of Origin};
+    \path (3.35,-7.6) node[below][draw, fill=cyan!20, rounded corners] {Demand by Region of Origin};
 \end{tikzpicture}
 \end{scriptsize}
 \end{center}
@@ -1289,16 +1289,16 @@ Figure 2: \textbf{Armington Nesting}
     level 1/.style={sibling distance=5.5cm},
     level 2/.style={sibling distance=2cm}
 }
-\node {\normalsize Armington Demand (XA)}
-    child {node {Domestic Demand for Domestic Goods (XD)}}
-    child{node {Domestic Demand for Aggregate Import}
+\node[draw, fill=cyan!40, rounded corners] {\normalsize Armington Demand (XA)}
+    child {node[draw, fill=cyan!20, rounded corners] {Domestic Demand for Domestic Goods (XD)}}
+    child{node[draw, fill=cyan!20, rounded corners] {Domestic Demand for Aggregate Import}
         child{node { }}
         child{node { }}
         child{node { }}
         child {node { } edge from parent node[right] {$CES(\sigma^w, 0)$}}
     edge from parent node[right] {$CES(\sigma^m, 0)$}
     };
-    \path (2.8,-2.9) node[below] {Trading Partners};
+    \path (2.8,-2.9) node[below][draw, fill=cyan!20, rounded corners] {Trading Partners};
 \end{tikzpicture}
 \end{scriptsize}
 \end{center}
@@ -1324,16 +1324,16 @@ Figure 3: \textbf{Output Supply (CET) Nesting}
     level 1/.style={sibling distance=5.5cm},
     level 2/.style={sibling distance=2cm}
 }
-\node {\normalsize Aggrergate Domestic Supply (XP)}
-    child {node {Domestic Supply for the Domestic Market (XD)}}
-    child{node {Aggregate Export Supply (ES)}
+\node[draw, fill=cyan!40, rounded corners] {\normalsize Aggrergate Domestic Supply (XP)}
+    child {node[draw, fill=cyan!20, rounded corners] {Domestic Supply for the Domestic Market (XD)}}
+    child{node[draw, fill=cyan!20, rounded corners] {Aggregate Export Supply (ES)}
         child{node { }}
         child{node { }}
         child{node { }}
         child {node { } edge from parent node[right] {$CET(\sigma^z, 0)$}}
     edge from parent node[right] {$CET(\sigma^t, 0)$}
     };
-    \path (2.8,-2.9) node[below] {Trading Partners};
+    \path (2.8,-2.9) node[below][draw, fill=cyan!20, rounded corners] {Trading Partners};
 \end{tikzpicture}
 \end{scriptsize}
 \end{center}
